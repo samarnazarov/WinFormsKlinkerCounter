@@ -1,0 +1,264 @@
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.exe.config
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.exe
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\EasyModbus.dll
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\NModbus4.dll
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.dll
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\zxing.dll
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\zxing.presentation.dll
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\EasyModbus.xml
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\NModbus4.xml
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.xml
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\zxing.xml
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\zxing.presentation.xml
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.AssemblyReference.cache
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.AutorizationForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.Form1.resources
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.Properties.Resources.resources
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.ReportForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.GenerateResource.cache
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.CoreCompileInputs.cache
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinForms.358F5532.Up2Date
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.exe
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.TempForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\INIFileParser.dll
+D:\My Projects\C#\WinFormsKlinkerCounter\WinFormsKlinkerCounter\bin\Release\INIFileParser.xml
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.exe
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\EasyModbus.dll
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\zxing.dll
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.exe.config
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\INIFileParser.dll
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\NModbus4.dll
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.dll
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\zxing.presentation.dll
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\EasyModbus.xml
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\INIFileParser.xml
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\NModbus4.xml
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.xml
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\zxing.xml
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\bin\Release\zxing.presentation.xml
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.AssemblyReference.cache
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.AutorizationForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.Form1.resources
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.Properties.Resources.resources
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.ReportForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.GenerateResource.cache
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.CoreCompileInputs.cache
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinForms.358F5532.Up2Date
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.exe
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.SettingsForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.exe.config
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.exe
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\EasyModbus.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\INIFileParser.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\NModbus4.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zxing.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zxing.presentation.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\EasyModbus.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\INIFileParser.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\NModbus4.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zxing.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zxing.presentation.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.AssemblyReference.cache
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.AutorizationForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.Form1.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.Properties.Resources.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.ReportForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.SettingsForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.GenerateResource.cache
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.CoreCompileInputs.cache
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinForms.358F5532.Up2Date
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.exe
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\runtimes\win-x86\native\WebView2Loader.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\runtimes\win-x64\native\WebView2Loader.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\runtimes\win-arm64\native\WebView2Loader.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.Core.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.WinForms.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.Wpf.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.Core.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.WinForms.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.Wpf.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\EPPlus.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\EPPlus.Interfaces.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\EPPlus.System.Drawing.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Buffers.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.ComponentModel.Annotations.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Memory.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Numerics.Vectors.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\EPPlus.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Buffers.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Memory.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Numerics.Vectors.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\SqlServerTypes\x64\msvcr120.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\SqlServerTypes\x86\msvcr120.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.ReportViewer.Design.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.SqlServer.Types.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\EnvDTE.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\stdole.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\Microsoft.MSXML.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.ReportPreviewForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\SqlServerTypes\x64\msvcr120.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\SqlServerTypes\x86\msvcr120.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\runtimes\win-x86\native\WebView2Loader.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\runtimes\win-x64\native\WebView2Loader.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\runtimes\win-arm64\native\WebView2Loader.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.exe.config
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.exe
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\WinFormsKlinkerCounter.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\EasyModbus.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\EPPlus.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\EPPlus.Interfaces.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\EPPlus.System.Drawing.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\INIFileParser.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.ReportViewer.Design.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.SqlServer.Types.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.Core.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.WinForms.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.Wpf.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\NModbus4.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Buffers.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.ComponentModel.Annotations.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Memory.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Numerics.Vectors.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zxing.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zxing.presentation.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\EnvDTE.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\stdole.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.MSXML.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\EasyModbus.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\EPPlus.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\INIFileParser.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.Core.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.WinForms.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\Microsoft.Web.WebView2.Wpf.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\NModbus4.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Buffers.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.pdb
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Drawing.Common.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Memory.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Numerics.Vectors.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zxing.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zxing.presentation.xml
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.AssemblyReference.cache
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.AutorizationForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.Form1.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.Properties.Resources.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.ReportForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.ReportPreviewForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.SettingsForm.resources
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.GenerateResource.cache
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.csproj.CoreCompileInputs.cache
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinForms.358F5532.Up2Date
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.exe
+D:\My Projects\C#\WinFormsKlinkerCounter  V3.0 — копия\WinFormsKlinkerCounter\obj\Release\WinFormsKlinkerCounter.pdb

@@ -60,23 +60,26 @@ namespace WinFormsKlinkerCounter
         string microsimData;
         Double microsimDoubleData;
         string stabRegisters; // stabilization register
+        private bool isQrCodeRecognized = false;
+        public DateTime date;
 
-       
-        /*int COUNT = 100000;      //*********************
-        Double maxWeight = 6.0;
+
+
+        int COUNT = 5000;  
+        Double maxWeight = 4.0;
         string comPort = "COM11";
         string modbusPort = "COM11";
         string cameraUrl = "http://172.16.29.4/ISAPI/Streaming/channels/101/picture";
         //***********************ВКЛЮЧИТЬ OnCmd()
-        public string connectionString = "Server=Nazarov-S\\SQLEXPRESS;Database=klinkerDataBase;Integrated Security=SSPI;";*/
-        public DateTime date;
+        public string connectionString = "Server=Nazarov-S\\SQLEXPRESS;Database=klinkerDataBase;Integrated Security=SSPI;";
 
-        int COUNT = 60000;      
+
+        /*int COUNT = 70000;      
         Double maxWeight = 35.0;
         string comPort = "COM7";
-        string modbusPort = "COM1";
+        string modbusPort = "COM8";
         string cameraUrl = "http://172.16.29.5/ISAPI/Streaming/channels/101/picture";
-        public string connectionString = "Server=TAROZI-KLINKER;Database=klinkerDataBase;Integrated Security=SSPI;";
+        public string connectionString = "Server=TAROZI-KLINKER;Database=klinkerDataBase;Integrated Security=SSPI;";*/
 
         //Многопоточность
         Thread thread1;
@@ -89,6 +92,7 @@ namespace WinFormsKlinkerCounter
         {
             //iniFileReading();
             InitializeComponent(); // Initialize the form components first
+            port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
             //StartProcessing();
             //CreateTimersAndLaunch();
 
@@ -96,9 +100,13 @@ namespace WinFormsKlinkerCounter
             myTimer.Interval = 50;
             writeDataTimer.Tick += writeDataTimer_Tick2;
             writeDataTimer.Interval = COUNT;
+            qrCodeTextBoxDoNull_timer.Tick += qrCodeTextBoxDoNull_timer_Tick;
+            qrCodeTextBoxDoNull_timer.Interval = 100000;
+
             thread1 = new Thread(delegate () 
             {
                 Reading();
+                
             });
             thread2 = new Thread(delegate ()
             {
@@ -110,18 +118,11 @@ namespace WinFormsKlinkerCounter
             //weightIndicatorUpdate += new News(this.getDataFromWeightIndicator);
 
         }
-        
-       /* private void CreateTimersAndLaunch()
+
+        private void qrCodeTextBoxDoNull_timer_Tick(object sender, EventArgs e)
         {
-            myTimer.Tick += myTimer_Tick;
-                myTimer.Interval = 50;
-                writeDataTimer.Tick += writeDataTimer_Tick2;
-                writeDataTimer.Interval = COUNT;
-                thread1 = new Thread(delegate () 
-                {
-                    Reading();
-                });
-        }*/
+            Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
+        }
 
         private async void запуститьToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -129,6 +130,7 @@ namespace WinFormsKlinkerCounter
             { 
                 myTimer.Start();                
                 thread1.Start();
+                qrCodeTextBoxDoNull_timer.Start();
                 //thread2.Start();
                 
             } 
@@ -223,7 +225,8 @@ namespace WinFormsKlinkerCounter
                             date = DateTime.Now;
                             SaveImageToFile(date);
                             Thread.Sleep(100);
-                            writeDataToDatabase(date);                           
+                            writeDataToDatabase(date); 
+                            
                             canWriteData = false;
                             try
                             {
@@ -234,6 +237,7 @@ namespace WinFormsKlinkerCounter
                                 toolStripStatusLabel1.Text = $"An error occurred0: {ex.Message}";
                             }
                             writeDataTimer.Start();
+                            Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
                         }
                         else
                         {
@@ -256,7 +260,7 @@ namespace WinFormsKlinkerCounter
         {           
             try
             {
-                port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);                
+                //port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);                
                 start = true;
             }
             catch (Exception ex) 
@@ -277,7 +281,6 @@ namespace WinFormsKlinkerCounter
                     if (ssuz != null && ssuz.Length == 14)
                     {
                         microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
-                        //microsimData1 = ssuz.Substring(2, 7).Replace(".", ",");
                         stabRegisters = ssuz.Substring(9, 1);
                     }
                     else
@@ -301,8 +304,29 @@ namespace WinFormsKlinkerCounter
                     }
                     return;
                 }
-                //await Task.Delay(50);
             }
+        }
+
+        private async Task SendDataToComPort(string data)
+        {
+            try
+            {
+                /*if (!port.IsOpen)
+                {
+                    port.Open();
+                }*/
+                await port.BaseStream.WriteAsync(Encoding.ASCII.GetBytes(data), 0, data.Length);
+                //port.Close();
+            }
+            catch (Exception ex)
+            {
+                Invoke((Action)(() => toolStripStatusLabel1.Text = $"An error occurred4: {ex.Message}"));
+            }
+        }
+
+        private async void buttonSendData_Click(object sender, EventArgs e)
+        {
+            await SendDataToComPort("B");
         }
 
         private void test_button_Click(object sender, EventArgs e)
@@ -312,8 +336,6 @@ namespace WinFormsKlinkerCounter
             writeDataToDatabase(date);
             MessageBox.Show("Test completed!");
         }
-
-        private bool isQrCodeRecognized = false;
 
         private async Task HttpClientUsing()
         // getting image from ip-camera
@@ -346,22 +368,17 @@ namespace WinFormsKlinkerCounter
                                 }));
                                 IBarcodeReader reader = new BarcodeReader();
                                 var result = reader.Decode(img);
-                                if (result != null)
+                                string lastChar = result.Text.Substring(result.Text.Length - 1);//**********
+                                if (result != null && lastChar == "A" || lastChar == "B")//**********
+                                //if (result != null)
                                 {
                                     Invoke((Action)(() => qrCodeText_textBox.Text = result.Text));
-                                    /*isQrCodeRecognized = true;
-                                    await Task.Delay(5000);
-                                    isQrCodeRecognized = false;*/
-                                }
-                                else
-                                {
-                                    Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
                                 }
                                 await Task.Delay(200);
                             }
                             catch
                             {
-                                Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
+                                //Invoke((Action)(() => qrCodeText_textBox.Text = "2Не определен!"));
                                 return;
                             }
 
@@ -376,7 +393,7 @@ namespace WinFormsKlinkerCounter
             }
             Task.Delay(20);
             
-        }  
+        }
 
         private void qrCodeText_textBox_TextChanged(object sender, EventArgs e)
         {
@@ -810,10 +827,11 @@ namespace WinFormsKlinkerCounter
 
         private void Form1_Load(object sender, EventArgs e)///////////////
         {
-            NULL_button.Visible = false;
+            //NULL_button.Visible = false;
             //button1.Visible = false;
-            test_button.Visible = false;    
+            test_button.Visible = false;
             //modbusOn_button.Visible = false;
+            this.NULL_button.Click += new System.EventHandler(this.buttonSendData_Click);
 
         }
 
@@ -886,5 +904,7 @@ namespace WinFormsKlinkerCounter
                 }
             }
         }
+
+       
     }
 }
