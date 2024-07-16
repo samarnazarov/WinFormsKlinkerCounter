@@ -43,7 +43,7 @@ namespace WinFormsKlinkerCounter
     public partial class Form1 : Form
     {
 
-        
+        int num222 = 0;
         static public bool EN;
         static public bool ENport;       
         event News alwaysUpdate;
