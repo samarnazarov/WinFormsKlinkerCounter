@@ -63,8 +63,7 @@ namespace WinFormsKlinkerCounter
         private bool isQrCodeRecognized = false;
         public DateTime date;
 
-
-
+        
         int COUNT = 5000;  
         Double maxWeight = 4.0;
         string comPort = "COM11";
