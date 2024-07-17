@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.qrCode_pictureBox = new System.Windows.Forms.PictureBox();
             this.qrCodeText_textBox = new System.Windows.Forms.TextBox();
@@ -56,13 +56,6 @@
             this.weightIndicator_label = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.licencePlate_dataGridView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plateNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tara = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.NullIndicator_panel = new System.Windows.Forms.Panel();
@@ -82,6 +75,15 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerPort = new System.Windows.Forms.Timer(this.components);
             this.qrCodeTextBoxDoNull_timer = new System.Windows.Forms.Timer(this.components);
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dddd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plateNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tara = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oldWeight_label = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.qrCode_pictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -197,6 +199,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.groupBox1.Controls.Add(this.oldWeight_label);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.sensor_label);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label12);
@@ -218,7 +222,7 @@
             // 
             this.sensor_label.AutoSize = true;
             this.sensor_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sensor_label.Location = new System.Drawing.Point(82, 276);
+            this.sensor_label.Location = new System.Drawing.Point(123, 276);
             this.sensor_label.Name = "sensor_label";
             this.sensor_label.Size = new System.Drawing.Size(20, 24);
             this.sensor_label.TabIndex = 21;
@@ -229,9 +233,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(6, 276);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 24);
+            this.label11.Size = new System.Drawing.Size(103, 24);
             this.label11.TabIndex = 20;
-            this.label11.Text = "Sensor:";
+            this.label11.Text = "microDbDt:";
             // 
             // label12
             // 
@@ -303,33 +307,33 @@
             // 
             // licencePlate_dataGridView
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.licencePlate_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.licencePlate_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.licencePlate_dataGridView.ColumnHeadersHeight = 25;
             this.licencePlate_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.licencePlate_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Date,
+            this.dddd,
             this.plateNumber,
             this.tara,
             this.netto,
             this.brutto,
             this.destination});
             this.licencePlate_dataGridView.Cursor = System.Windows.Forms.Cursors.Arrow;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.licencePlate_dataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.licencePlate_dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.licencePlate_dataGridView.EnableHeadersVisualStyles = false;
             this.licencePlate_dataGridView.Location = new System.Drawing.Point(10, 399);
             this.licencePlate_dataGridView.Name = "licencePlate_dataGridView";
@@ -339,46 +343,6 @@
             this.licencePlate_dataGridView.Size = new System.Drawing.Size(993, 245);
             this.licencePlate_dataGridView.TabIndex = 11;
             this.licencePlate_dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.licencePlate_dataGridView_CellDoubleClick);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 40;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Дата";
-            this.Date.Name = "Date";
-            this.Date.Width = 180;
-            // 
-            // plateNumber
-            // 
-            this.plateNumber.HeaderText = "Номер авто";
-            this.plateNumber.Name = "plateNumber";
-            this.plateNumber.Width = 220;
-            // 
-            // tara
-            // 
-            this.tara.HeaderText = "Тара";
-            this.tara.Name = "tara";
-            // 
-            // netto
-            // 
-            this.netto.HeaderText = "Нетто";
-            this.netto.Name = "netto";
-            // 
-            // brutto
-            // 
-            this.brutto.HeaderText = "Брутто";
-            this.brutto.Name = "brutto";
-            // 
-            // destination
-            // 
-            this.destination.HeaderText = "Маршрут";
-            this.destination.Name = "destination";
-            this.destination.Width = 250;
             // 
             // groupBox2
             // 
@@ -560,6 +524,64 @@
             // 
             this.qrCodeTextBoxDoNull_timer.Tick += new System.EventHandler(this.qrCodeTextBoxDoNull_timer_Tick);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 70;
+            // 
+            // dddd
+            // 
+            this.dddd.HeaderText = "Дата";
+            this.dddd.Name = "dddd";
+            this.dddd.Width = 220;
+            // 
+            // plateNumber
+            // 
+            this.plateNumber.HeaderText = "Номер авто";
+            this.plateNumber.Name = "plateNumber";
+            // 
+            // tara
+            // 
+            this.tara.HeaderText = "Тара";
+            this.tara.Name = "tara";
+            // 
+            // netto
+            // 
+            this.netto.HeaderText = "Нетто";
+            this.netto.Name = "netto";
+            // 
+            // brutto
+            // 
+            this.brutto.HeaderText = "Брутто";
+            this.brutto.Name = "brutto";
+            // 
+            // destination
+            // 
+            this.destination.HeaderText = "Маршрут";
+            this.destination.Name = "destination";
+            this.destination.Width = 310;
+            // 
+            // oldWeight_label
+            // 
+            this.oldWeight_label.AutoSize = true;
+            this.oldWeight_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.oldWeight_label.Location = new System.Drawing.Point(125, 243);
+            this.oldWeight_label.Name = "oldWeight_label";
+            this.oldWeight_label.Size = new System.Drawing.Size(20, 24);
+            this.oldWeight_label.TabIndex = 23;
+            this.oldWeight_label.Text = "0";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(8, 243);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(100, 24);
+            this.label14.TabIndex = 22;
+            this.label14.Text = "oldWeight:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,16 +659,18 @@
         private System.Windows.Forms.Button NULL_button;
         private System.Windows.Forms.Panel NullIndicator_panel;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label sensor_label;
+        private System.Windows.Forms.Timer qrCodeTextBoxDoNull_timer;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dddd;
         private System.Windows.Forms.DataGridViewTextBoxColumn plateNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn tara;
         private System.Windows.Forms.DataGridViewTextBoxColumn netto;
         private System.Windows.Forms.DataGridViewTextBoxColumn brutto;
         private System.Windows.Forms.DataGridViewTextBoxColumn destination;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label sensor_label;
-        private System.Windows.Forms.Timer qrCodeTextBoxDoNull_timer;
+        private System.Windows.Forms.Label oldWeight_label;
+        private System.Windows.Forms.Label label14;
     }
 }
 

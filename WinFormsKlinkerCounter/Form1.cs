@@ -179,12 +179,8 @@ namespace WinFormsKlinkerCounter
 
         private void writeDataTimer_Tick2(object sender, EventArgs e)
         {
-            // timer to allow data recording in a specified interval
-            if (0.1 * (double)oldWeight <= microsimDoubleData)
-            {
-                canWriteData = true;
-                writeDataTimer.Stop();
-            }
+             canWriteData = true;
+             writeDataTimer.Stop();
         }
 
         private void conditionsChecking()
@@ -215,8 +211,6 @@ namespace WinFormsKlinkerCounter
                 {
                     NullIndicator_panel.BackColor = Color.Red;
                 }
-
-
                 if (stabRegisters.Equals(" ") && microsimDoubleData >= maxWeight&& qrCodeText_textBox.Text!= "Не определен!")
                 //if (stabRegisters.Equals(" ") && microsimDoubleData >= maxWeight)
                 {
@@ -227,9 +221,7 @@ namespace WinFormsKlinkerCounter
                             date = DateTime.Now;
                             SaveImageToFile(date);
                             Thread.Sleep(100);
-                            writeDataToDatabase(date); 
-                            
-                            canWriteData = false;
+                            writeDataToDatabase(date);
                             /*try
                             {
                                 OnCmd(); //turn on traffic light
@@ -238,7 +230,8 @@ namespace WinFormsKlinkerCounter
                             {
                                 toolStripStatusLabel1.Text = $"An error occurred0: {ex.Message}";
                             }*/
-                            writeDataTimer.Start();
+                            //canWriteData = false;
+                            //writeDataTimer.Start();
                             Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
                         }
                         else
@@ -248,7 +241,17 @@ namespace WinFormsKlinkerCounter
                     }
                     catch (Exception ex){ MessageBox.Show($"{ex}"); }
                 }
-              
+                Invoke((Action)(() => {
+                    sensor_label.Text = microsimDoubleData.ToString();
+                    oldWeight_label.Text = (0.2*(double)oldWeight).ToString();
+                    }));
+                if (0.2 * (double)oldWeight >= microsimDoubleData)
+                {
+                    canWriteData = true;
+                    oldWeight = 0;
+                    //writeDataTimer.Stop();    
+                }
+
             }
             catch (Exception ex)
             {
@@ -272,8 +275,7 @@ namespace WinFormsKlinkerCounter
             while (true)
             {
                 try
-                {
-                    
+                {                    
                     {
                         //labelTimerPort.Text = "timer uchdi!";
                         if (!port.IsOpen)
@@ -317,17 +319,6 @@ namespace WinFormsKlinkerCounter
                     return;
                 }
             }
-        }
-
-        private async Task SendDataToComPort(string data)
-        {
-            ;// isWriting = true;          
-           
-        }
-
-        private async void buttonSendData_Click(object sender, EventArgs e)
-        {
-            await SendDataToComPort("B");
         }
 
         private void test_button_Click(object sender, EventArgs e)
@@ -514,10 +505,10 @@ namespace WinFormsKlinkerCounter
                         DataTable dataTable = new DataTable();
                         dataAdapter.Fill(dataTable);
                         licencePlate_dataGridView.DataSource = dataTable;
-                        licencePlate_dataGridView.Columns["date"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
+                        licencePlate_dataGridView.Columns["dddd"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
 
                         licencePlate_dataGridView.Columns["ID"].DataPropertyName = "ID";
-                        licencePlate_dataGridView.Columns["Date"].DataPropertyName = "date";
+                        licencePlate_dataGridView.Columns["dddd"].DataPropertyName = "date";
                         licencePlate_dataGridView.Columns["plateNumber"].DataPropertyName = "licencePlate";
                         licencePlate_dataGridView.Columns["tara"].DataPropertyName = "tara";
                         licencePlate_dataGridView.Columns["netto"].DataPropertyName = "netto";
@@ -735,7 +726,7 @@ namespace WinFormsKlinkerCounter
         private void saveToDataBase(DateTime date, string licencePlate, decimal tara,  decimal brutto, string destination, string photo)
         {
             decimal nettoValue=brutto-tara;
-            oldWeight = nettoValue;
+            oldWeight = brutto;
             canWriteData = false;
             try
             {
@@ -912,5 +903,7 @@ namespace WinFormsKlinkerCounter
         {
             isWriting = true;
         }
+
+        
     }
 }
