@@ -42,8 +42,8 @@ namespace WinFormsKlinkerCounter
     
     public partial class Form1 : Form
     {
-
-        
+        private bool isWriting = false;
+        private decimal oldWeight;
         static public bool EN;
         static public bool ENport;       
         event News alwaysUpdate;
@@ -76,7 +76,7 @@ namespace WinFormsKlinkerCounter
         /*int COUNT = 70000;      
         Double maxWeight = 35.0;
         string comPort = "COM7";
-        string modbusPort = "COM8";
+        string modbusPort = "COM1";
         string cameraUrl = "http://172.16.29.5/ISAPI/Streaming/channels/101/picture";
         public string connectionString = "Server=TAROZI-KLINKER;Database=klinkerDataBase;Integrated Security=SSPI;";*/
 
@@ -91,7 +91,7 @@ namespace WinFormsKlinkerCounter
         {
             //iniFileReading();
             InitializeComponent(); // Initialize the form components first
-            port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
+            //port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
             //StartProcessing();
             //CreateTimersAndLaunch();
 
@@ -180,8 +180,11 @@ namespace WinFormsKlinkerCounter
         private void writeDataTimer_Tick2(object sender, EventArgs e)
         {
             // timer to allow data recording in a specified interval
-            canWriteData = true;
-            writeDataTimer.Stop();
+            if (0.1 * (double)oldWeight <= microsimDoubleData)
+            {
+                canWriteData = true;
+                writeDataTimer.Stop();
+            }
         }
 
         private void conditionsChecking()
@@ -227,14 +230,14 @@ namespace WinFormsKlinkerCounter
                             writeDataToDatabase(date); 
                             
                             canWriteData = false;
-                            try
+                            /*try
                             {
                                 OnCmd(); //turn on traffic light
                             }
                             catch (Exception ex)
                             {
                                 toolStripStatusLabel1.Text = $"An error occurred0: {ex.Message}";
-                            }
+                            }*/
                             writeDataTimer.Start();
                             Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
                         }
@@ -259,7 +262,7 @@ namespace WinFormsKlinkerCounter
         {           
             try
             {
-                //port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);                
+                port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);                
                 start = true;
             }
             catch (Exception ex) 
@@ -270,29 +273,39 @@ namespace WinFormsKlinkerCounter
             {
                 try
                 {
-                    //labelTimerPort.Text = "timer uchdi!";
-                    if (!port.IsOpen)
-                    {
-                        port.Open();
-                    }
                     
-                    string ssuz = port.ReadLine();
-                    if (ssuz != null && ssuz.Length == 14)
                     {
-                        microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
-                        stabRegisters = ssuz.Substring(9, 1);
-                    }
-                    else
-                    {           
-                        toolStripStatusLabel1.Text = "Invalid data length";  
-                    }
-                    Double.TryParse(microsimData, out microsimDoubleData);
-                    Invoke((Action)(() =>
+                        //labelTimerPort.Text = "timer uchdi!";
+                        if (!port.IsOpen)
                         {
-                            weightIndicatorTest = microsimData;
-                            bruttoTest = microsimData.Replace("-","");
-                        }));
-                    port.Close();               
+                            port.Open();
+                        }
+
+                        string ssuz = port.ReadLine();
+                        if (isWriting)
+                        {
+                            port.WriteLine("B");
+                            isWriting = false;
+                            continue;
+                        }
+
+                        if (ssuz != null && ssuz.Length == 14)
+                        {
+                            microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
+                            stabRegisters = ssuz.Substring(9, 1);
+                        }
+                        else
+                        {
+                            toolStripStatusLabel1.Text = "Invalid data length";
+                        }
+                        Double.TryParse(microsimData, out microsimDoubleData);
+                        Invoke((Action)(() =>
+                            {
+                                weightIndicatorTest = microsimData;
+                                bruttoTest = microsimData.Replace("-", "");
+                            }));
+                        port.Close();
+                    }
                 }
                 catch (Exception ex)
                 {                    
@@ -308,19 +321,8 @@ namespace WinFormsKlinkerCounter
 
         private async Task SendDataToComPort(string data)
         {
-            try
-            {
-                /*if (!port.IsOpen)
-                {
-                    port.Open();
-                }*/
-                await port.BaseStream.WriteAsync(Encoding.ASCII.GetBytes(data), 0, data.Length);
-                //port.Close();
-            }
-            catch (Exception ex)
-            {
-                Invoke((Action)(() => toolStripStatusLabel1.Text = $"An error occurred4: {ex.Message}"));
-            }
+            ;// isWriting = true;          
+           
         }
 
         private async void buttonSendData_Click(object sender, EventArgs e)
@@ -733,6 +735,8 @@ namespace WinFormsKlinkerCounter
         private void saveToDataBase(DateTime date, string licencePlate, decimal tara,  decimal brutto, string destination, string photo)
         {
             decimal nettoValue=brutto-tara;
+            oldWeight = nettoValue;
+            canWriteData = false;
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -830,7 +834,7 @@ namespace WinFormsKlinkerCounter
             //button1.Visible = false;
             test_button.Visible = false;
             //modbusOn_button.Visible = false;
-            this.NULL_button.Click += new System.EventHandler(this.buttonSendData_Click);
+            //this.NULL_button.Click += new System.EventHandler(this.buttonSendData_Click);
 
         }
 
@@ -904,6 +908,9 @@ namespace WinFormsKlinkerCounter
             }
         }
 
-       
+        private void NULL_button_Click(object sender, EventArgs e)
+        {
+            isWriting = true;
+        }
     }
 }

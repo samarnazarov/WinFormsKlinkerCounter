@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.qrCode_pictureBox = new System.Windows.Forms.PictureBox();
             this.qrCodeText_textBox = new System.Windows.Forms.TextBox();
             this.myTimer = new System.Windows.Forms.Timer(this.components);
@@ -440,6 +441,7 @@
             this.NULL_button.TabIndex = 21;
             this.NULL_button.Text = "НОЛЬ";
             this.NULL_button.UseVisualStyleBackColor = true;
+            this.NULL_button.Click += new System.EventHandler(this.NULL_button_Click);
             // 
             // StabIndicator_panel
             // 
@@ -570,6 +572,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.qrCode_pictureBox);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

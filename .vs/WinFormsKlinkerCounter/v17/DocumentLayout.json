@@ -15,12 +15,14 @@
       "RelativeMoniker": "D:0:0:{1479DF5D-B257-4E92-A5CF-E1477DA234DC}|WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj|solutionrelative:winformsklinkercounter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1479DF5D-B257-4E92-A5CF-E1477DA234DC}|WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj|D:\\My Projects\\C#\\WinFormsKlinkerCounter\\winformsklinkercounter\\reportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1479DF5D-B257-4E92-A5CF-E1477DA234DC}|WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj|solutionrelative:winformsklinkercounter\\reportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|WinFormsKlinkerCounter||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1479DF5D-B257-4E92-A5CF-E1477DA234DC}|WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj|D:\\My Projects\\C#\\WinFormsKlinkerCounter\\winformsklinkercounter\\reportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1479DF5D-B257-4E92-A5CF-E1477DA234DC}|WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj|solutionrelative:winformsklinkercounter\\reportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1479DF5D-B257-4E92-A5CF-E1477DA234DC}|WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj|d:\\my projects\\c#\\winformsklinkercounter\\winformsklinkercounter\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +32,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +44,59 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WinFormsKlinkerCounter",
+              "DocumentMoniker": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj",
+              "RelativeDocumentMoniker": "WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj",
+              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj",
+              "RelativeToolTip": "WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-17T09:40:56.626Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -52,7 +106,7 @@
               "RelativeDocumentMoniker": "WinFormsKlinkerCounter\\Form1.cs",
               "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs",
               "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAC0AAAAIAAAA",
+              "ViewState": "AQIAAMoAAAAAAAAAAAAAANsAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-09T04:00:06.299Z",
               "EditorCaption": ""
@@ -63,10 +117,11 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormsKlinkerCounter\\Form1.cs",
-              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs [Design]*",
-              "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs [Design]*",
+              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs [Design]",
+              "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T05:36:19.858Z"
+              "WhenOpened": "2024-07-12T05:36:19.858Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -78,7 +133,8 @@
               "RelativeToolTip": "WinFormsKlinkerCounter\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T03:59:46.541Z"
+              "WhenOpened": "2024-07-09T03:59:46.541Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -91,17 +147,6 @@
               "ViewState": "AQIAAAQBAAAAAAAAAAAewDIBAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T06:39:27.898Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReportForm.cs [Design]",
-              "DocumentMoniker": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\ReportForm.cs",
-              "RelativeDocumentMoniker": "WinFormsKlinkerCounter\\ReportForm.cs",
-              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter  V3.0\\WinFormsKlinkerCounter\\ReportForm.cs [Design]",
-              "RelativeToolTip": "..\\WinFormsKlinkerCounter  V3.0\\WinFormsKlinkerCounter\\ReportForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T12:12:37.096Z"
             }
           ]
         }
