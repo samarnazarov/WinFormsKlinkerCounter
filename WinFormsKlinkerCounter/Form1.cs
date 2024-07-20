@@ -64,21 +64,21 @@ namespace WinFormsKlinkerCounter
         public DateTime date;
 
         
-        int COUNT = 5000;  
+        /*int COUNT = 5000;  
         Double maxWeight = 4.0;
         string comPort = "COM11";
         string modbusPort = "COM11";
         string cameraUrl = "http://172.16.29.4/ISAPI/Streaming/channels/101/picture";
         //***********************ВКЛЮЧИТЬ OnCmd()
-        public string connectionString = "Server=Nazarov-S\\SQLEXPRESS;Database=klinkerDataBase;Integrated Security=SSPI;";
+        public string connectionString = "Server=Nazarov-S\\SQLEXPRESS;Database=klinkerDataBase;Integrated Security=SSPI;";*/
 
 
-        /*int COUNT = 70000;      
+        int COUNT = 70000;      
         Double maxWeight = 35.0;
         string comPort = "COM7";
-        string modbusPort = "COM1";
+        string modbusPort = "COM8";
         string cameraUrl = "http://172.16.29.5/ISAPI/Streaming/channels/101/picture";
-        public string connectionString = "Server=TAROZI-KLINKER;Database=klinkerDataBase;Integrated Security=SSPI;";*/
+        public string connectionString = "Server=TAROZI-KLINKER;Database=klinkerDataBase;Integrated Security=SSPI;";
 
         //Многопоточность
         Thread thread1;
@@ -129,6 +129,7 @@ namespace WinFormsKlinkerCounter
             { 
                 myTimer.Start();                
                 thread1.Start();
+                thread1.IsBackground = true;
                 qrCodeTextBoxDoNull_timer.Start();
                 //thread2.Start();
                 
@@ -222,14 +223,14 @@ namespace WinFormsKlinkerCounter
                             SaveImageToFile(date);
                             Thread.Sleep(100);
                             writeDataToDatabase(date);
-                            /*try
+                            try
                             {
                                 OnCmd(); //turn on traffic light
                             }
                             catch (Exception ex)
                             {
                                 toolStripStatusLabel1.Text = $"An error occurred0: {ex.Message}";
-                            }*/
+                            }
                             //canWriteData = false;
                             //writeDataTimer.Start();
                             Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
