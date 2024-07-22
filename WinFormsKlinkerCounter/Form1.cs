@@ -97,15 +97,25 @@ namespace WinFormsKlinkerCounter
 
             myTimer.Tick += myTimer_Tick;
             myTimer.Interval = 50;
-            writeDataTimer.Tick += writeDataTimer_Tick2;
-            writeDataTimer.Interval = COUNT;
             qrCodeTextBoxDoNull_timer.Tick += qrCodeTextBoxDoNull_timer_Tick;
             qrCodeTextBoxDoNull_timer.Interval = 100000;
 
-            thread1 = new Thread(delegate () 
+            thread1 = new Thread(async delegate () 
             {
-                Reading();
-                
+                while (true)
+                {
+                    try
+                    {
+                        Reading();
+                        break;
+                    }
+                    catch (Exception ex)
+                    {
+                        toolStripStatusLabel1.Text = $"An error occurred Com7: {ex.Message}";
+                        await Task.Delay(100);
+                        return;
+                    }
+                }               
             });
             thread2 = new Thread(delegate ()
             {
@@ -178,12 +188,6 @@ namespace WinFormsKlinkerCounter
             }
         }
 
-        private void writeDataTimer_Tick2(object sender, EventArgs e)
-        {
-             canWriteData = true;
-             writeDataTimer.Stop();
-        }
-
         private void conditionsChecking()
         {
             try
@@ -230,9 +234,8 @@ namespace WinFormsKlinkerCounter
                             catch (Exception ex)
                             {
                                 toolStripStatusLabel1.Text = $"An error occurred0: {ex.Message}";
+                                return;
                             }
-                            //canWriteData = false;
-                            //writeDataTimer.Start();
                             Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
                         }
                         else
@@ -263,62 +266,66 @@ namespace WinFormsKlinkerCounter
         }
    
         private async void Reading()
-        {           
-            try
-            {
-                port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);                
-                start = true;
-            }
-            catch (Exception ex) 
-            {               
-                    toolStripStatusLabel1.Text = $"An error occurred2: {ex.Message}";               
-            }
+        {
             while (true)
             {
                 try
-                {                    
-                    {
-                        //labelTimerPort.Text = "timer uchdi!";
-                        if (!port.IsOpen)
-                        {
-                            port.Open();
-                        }
-
-                        string ssuz = port.ReadLine();
-                        if (isWriting)
-                        {
-                            port.WriteLine("B");
-                            isWriting = false;
-                            continue;
-                        }
-
-                        if (ssuz != null && ssuz.Length == 14)
-                        {
-                            microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
-                            stabRegisters = ssuz.Substring(9, 1);
-                        }
-                        else
-                        {
-                            toolStripStatusLabel1.Text = "Invalid data length";
-                        }
-                        Double.TryParse(microsimData, out microsimDoubleData);
-                        Invoke((Action)(() =>
-                            {
-                                weightIndicatorTest = microsimData;
-                                bruttoTest = microsimData.Replace("-", "");
-                            }));
-                        port.Close();
-                    }
+                {
+                    port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
+                    start = true;
                 }
                 catch (Exception ex)
-                {                    
-                    toolStripStatusLabel1.Text = $"An error occurred3: {ex.Message}";                   
-                    if (port.IsOpen)
-                    {
-                        port.Close();
-                    }
-                    return;
+                {
+                    toolStripStatusLabel1.Text = $"An error occurred2: {ex.Message}";
                 }
+                while (true)
+                {
+                    try
+                    {
+                        {
+                            //labelTimerPort.Text = "timer uchdi!";
+                            if (!port.IsOpen)
+                            {
+                                port.Open();
+                            }
+
+                            string ssuz = port.ReadLine();
+                            if (isWriting)
+                            {
+                                port.WriteLine("B");
+                                isWriting = false;
+                                continue;
+                            }
+
+                            if (ssuz != null && ssuz.Length == 14)
+                            {
+                                microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
+                                stabRegisters = ssuz.Substring(9, 1);
+                            }
+                            else
+                            {
+                                toolStripStatusLabel1.Text = "Invalid data length";
+                            }
+                            Double.TryParse(microsimData, out microsimDoubleData);
+                            Invoke((Action)(() =>
+                                {
+                                    weightIndicatorTest = microsimData;
+                                    bruttoTest = microsimData.Replace("-", "");
+                                }));
+                            port.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        toolStripStatusLabel1.Text = $"An error occurred3: {ex.Message}";
+                        if (port.IsOpen)
+                        {
+                            port.Close();
+                        }
+                        break;
+                    }
+                }
+                await Task.Delay(500);
             }
         }
 
@@ -436,8 +443,16 @@ namespace WinFormsKlinkerCounter
             modbusClient.Parity = System.IO.Ports.Parity.None;
             modbusClient.StopBits = System.IO.Ports.StopBits.One;
             modbusClient.UnitIdentifier = 16; 
-            
-            modbusClient.Connect();                       
+            try 
+            {
+                modbusClient.Connect();
+            }
+            catch (Exception ex) 
+            {
+                toolStripStatusLabel1.Text = $"An error occurred Port11: {ex.Message}";
+                return;
+            }
+                                  
             modbusClient.WriteSingleRegister(512, 1);
             //modbusClient.WriteSingleRegister(512, 0);
             modbusClient.Disconnect();
@@ -569,7 +584,7 @@ namespace WinFormsKlinkerCounter
                                         img.Save(filePath, ImageFormat.Jpeg);
 
                                         infoLabel.Text = "Image saved!";
-                                        toolStripStatusLabel1.Text = "Image successfully saved!";
+                                        //toolStripStatusLabel1.Text = "Image successfully saved!";
                                         return;
                                     }
                                     catch (Exception ex)
@@ -822,6 +837,7 @@ namespace WinFormsKlinkerCounter
 
         private void Form1_Load(object sender, EventArgs e)///////////////
         {
+            qrCodeText_textBox.Text = "Не определен!";
             //NULL_button.Visible = false;
             //button1.Visible = false;
             test_button.Visible = false;
