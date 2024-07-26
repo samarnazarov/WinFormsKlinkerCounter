@@ -446,6 +446,9 @@ namespace WinFormsKlinkerCounter
             try 
             {
                 modbusClient.Connect();
+                modbusClient.WriteSingleRegister(512, 1);
+                //modbusClient.WriteSingleRegister(512, 0);
+                modbusClient.Disconnect();
             }
             catch (Exception ex) 
             {
@@ -453,9 +456,7 @@ namespace WinFormsKlinkerCounter
                 return;
             }
                                   
-            modbusClient.WriteSingleRegister(512, 1);
-            //modbusClient.WriteSingleRegister(512, 0);
-            modbusClient.Disconnect();
+ 
             await Task.Delay(100);
         }
 
