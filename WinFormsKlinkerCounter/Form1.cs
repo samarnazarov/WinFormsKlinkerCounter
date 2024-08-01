@@ -114,6 +114,8 @@ namespace WinFormsKlinkerCounter
                         toolStripStatusLabel1.Text = $"An error occurred Com7: {ex.Message}";
                         await Task.Delay(100);
                         return;
+                        
+                        
                     }
                 }               
             });
@@ -452,7 +454,7 @@ namespace WinFormsKlinkerCounter
             }
             catch (Exception ex) 
             {
-                toolStripStatusLabel1.Text = $"An error occurred Port11: {ex.Message}";
+                toolStripStatusLabel1.Text = $"An error occurred Port7: {ex.Message}";
                 return;
             }
                                   

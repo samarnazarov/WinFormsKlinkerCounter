@@ -46,6 +46,8 @@
             this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.oldWeight_label = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.sensor_label = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -56,6 +58,13 @@
             this.weightIndicator_label = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.licencePlate_dataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dddd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plateNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tara = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.NullIndicator_panel = new System.Windows.Forms.Panel();
@@ -75,15 +84,6 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerPort = new System.Windows.Forms.Timer(this.components);
             this.qrCodeTextBoxDoNull_timer = new System.Windows.Forms.Timer(this.components);
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dddd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plateNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tara = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.netto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brutto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oldWeight_label = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.qrCode_pictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -218,6 +218,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Данные авто";
             // 
+            // oldWeight_label
+            // 
+            this.oldWeight_label.AutoSize = true;
+            this.oldWeight_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.oldWeight_label.Location = new System.Drawing.Point(125, 243);
+            this.oldWeight_label.Name = "oldWeight_label";
+            this.oldWeight_label.Size = new System.Drawing.Size(20, 24);
+            this.oldWeight_label.TabIndex = 23;
+            this.oldWeight_label.Text = "0";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(8, 243);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(100, 24);
+            this.label14.TabIndex = 22;
+            this.label14.Text = "oldWeight:";
+            // 
             // sensor_label
             // 
             this.sensor_label.AutoSize = true;
@@ -337,12 +356,59 @@
             this.licencePlate_dataGridView.EnableHeadersVisualStyles = false;
             this.licencePlate_dataGridView.Location = new System.Drawing.Point(10, 399);
             this.licencePlate_dataGridView.Name = "licencePlate_dataGridView";
+            this.licencePlate_dataGridView.ReadOnly = true;
             this.licencePlate_dataGridView.RowHeadersVisible = false;
             this.licencePlate_dataGridView.RowTemplate.Height = 30;
             this.licencePlate_dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.licencePlate_dataGridView.Size = new System.Drawing.Size(993, 245);
             this.licencePlate_dataGridView.TabIndex = 11;
             this.licencePlate_dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.licencePlate_dataGridView_CellDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 70;
+            // 
+            // dddd
+            // 
+            this.dddd.HeaderText = "Дата";
+            this.dddd.Name = "dddd";
+            this.dddd.ReadOnly = true;
+            this.dddd.Width = 220;
+            // 
+            // plateNumber
+            // 
+            this.plateNumber.HeaderText = "Номер авто";
+            this.plateNumber.Name = "plateNumber";
+            this.plateNumber.ReadOnly = true;
+            // 
+            // tara
+            // 
+            this.tara.HeaderText = "Тара";
+            this.tara.Name = "tara";
+            this.tara.ReadOnly = true;
+            // 
+            // netto
+            // 
+            this.netto.HeaderText = "Нетто";
+            this.netto.Name = "netto";
+            this.netto.ReadOnly = true;
+            // 
+            // brutto
+            // 
+            this.brutto.HeaderText = "Брутто";
+            this.brutto.Name = "brutto";
+            this.brutto.ReadOnly = true;
+            // 
+            // destination
+            // 
+            this.destination.HeaderText = "Маршрут";
+            this.destination.Name = "destination";
+            this.destination.ReadOnly = true;
+            this.destination.Width = 310;
             // 
             // groupBox2
             // 
@@ -523,64 +589,6 @@
             // qrCodeTextBoxDoNull_timer
             // 
             this.qrCodeTextBoxDoNull_timer.Tick += new System.EventHandler(this.qrCodeTextBoxDoNull_timer_Tick);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 70;
-            // 
-            // dddd
-            // 
-            this.dddd.HeaderText = "Дата";
-            this.dddd.Name = "dddd";
-            this.dddd.Width = 220;
-            // 
-            // plateNumber
-            // 
-            this.plateNumber.HeaderText = "Номер авто";
-            this.plateNumber.Name = "plateNumber";
-            // 
-            // tara
-            // 
-            this.tara.HeaderText = "Тара";
-            this.tara.Name = "tara";
-            // 
-            // netto
-            // 
-            this.netto.HeaderText = "Нетто";
-            this.netto.Name = "netto";
-            // 
-            // brutto
-            // 
-            this.brutto.HeaderText = "Брутто";
-            this.brutto.Name = "brutto";
-            // 
-            // destination
-            // 
-            this.destination.HeaderText = "Маршрут";
-            this.destination.Name = "destination";
-            this.destination.Width = 310;
-            // 
-            // oldWeight_label
-            // 
-            this.oldWeight_label.AutoSize = true;
-            this.oldWeight_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.oldWeight_label.Location = new System.Drawing.Point(125, 243);
-            this.oldWeight_label.Name = "oldWeight_label";
-            this.oldWeight_label.Size = new System.Drawing.Size(20, 24);
-            this.oldWeight_label.TabIndex = 23;
-            this.oldWeight_label.Text = "0";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(8, 243);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 24);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "oldWeight:";
             // 
             // Form1
             // 
