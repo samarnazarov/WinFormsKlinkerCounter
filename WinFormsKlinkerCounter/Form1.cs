@@ -106,23 +106,33 @@ namespace WinFormsKlinkerCounter
                 {
                     try
                     {
-                        Reading();
-                        break;
+                        Reading();                       
                     }
                     catch (Exception ex)
                     {
-                        toolStripStatusLabel1.Text = $"An error occurred Com7: {ex.Message}";
-                        await Task.Delay(100);
-                        return;
-                        
-                        
+                        toolStripStatusLabel1.Text = $"An error occurred Com7: {ex.Message}";                         
+                        if(port.IsOpen) { port.Close(); }                        
                     }
+                    await Task.Delay(500);
                 }               
             });
-            thread2 = new Thread(delegate ()
+            /*thread2 = new Thread(async delegate ()
             {
-               ReadModbusRegisters();
-            });
+                while (true)
+                {
+                    try
+                    {
+                        await HttpClientUsing();
+                        await Task.Delay(1000);
+                    }
+                    catch (Exception ex)
+                    {
+                        toolStripStatusLabel1.Text = $"An error occurred Com******: {ex.Message}";
+                        await Task.Delay(100);
+                    }
+                }
+               
+            });*/
 
             //alwaysUpdate += new News(this.updateDataGridFromDataBase);
             //httpClientUpdate += new News(this.HttpClientUsing);
@@ -144,7 +154,8 @@ namespace WinFormsKlinkerCounter
                 thread1.IsBackground = true;
                 qrCodeTextBoxDoNull_timer.Start();
                 //thread2.Start();
-                
+                //thread2.IsBackground = true;
+
             } 
             else
             { 
@@ -267,68 +278,66 @@ namespace WinFormsKlinkerCounter
             }            
         }
    
-        private async void Reading()
-        {
-            while (true)
+        private async void Reading() 
+        {           
+            try
             {
-                try
-                {
-                    port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
-                    start = true;
-                }
-                catch (Exception ex)
-                {
-                    toolStripStatusLabel1.Text = $"An error occurred2: {ex.Message}";
-                }
-                while (true)
-                {
-                    try
-                    {
-                        {
-                            //labelTimerPort.Text = "timer uchdi!";
-                            if (!port.IsOpen)
-                            {
-                                port.Open();
-                            }
-
-                            string ssuz = port.ReadLine();
-                            if (isWriting)
-                            {
-                                port.WriteLine("B");
-                                isWriting = false;
-                                continue;
-                            }
-
-                            if (ssuz != null && ssuz.Length == 14)
-                            {
-                                microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
-                                stabRegisters = ssuz.Substring(9, 1);
-                            }
-                            else
-                            {
-                                toolStripStatusLabel1.Text = "Invalid data length";
-                            }
-                            Double.TryParse(microsimData, out microsimDoubleData);
-                            Invoke((Action)(() =>
-                                {
-                                    weightIndicatorTest = microsimData;
-                                    bruttoTest = microsimData.Replace("-", "");
-                                }));
-                            port.Close();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        toolStripStatusLabel1.Text = $"An error occurred3: {ex.Message}";
-                        if (port.IsOpen)
-                        {
-                            port.Close();
-                        }
-                        break;
-                    }
-                }
-                await Task.Delay(500);
+                port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
+                start = true;
             }
+            catch (Exception ex)
+            {
+                toolStripStatusLabel1.Text = $"An error occurred2: {ex.Message}";
+            }
+              
+            try
+            {
+                {
+                    //labelTimerPort.Text = "timer uchdi!";
+                    if (!port.IsOpen)
+                    {
+                        port.Open();
+                    }
+
+                    string ssuz = port.ReadLine();
+                    if (isWriting)
+                    {
+                        port.WriteLine("B");
+                        isWriting = false;
+                    }
+
+                    if (ssuz != null && ssuz.Length == 14)
+                    {
+                        microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
+                        stabRegisters = ssuz.Substring(9, 1);
+                    }
+                    else
+                    {
+                        toolStripStatusLabel1.Text = "Invalid data length";
+                    }
+                    Double.TryParse(microsimData, out microsimDoubleData);
+                    Invoke((Action)(() =>
+                        {
+                            weightIndicatorTest = microsimData;
+                            bruttoTest = microsimData.Replace("-", "");
+                        }));
+                    /*
+                    if (port.IsOpen)
+                    {
+                        port.Close();
+                    }*/
+                        
+                }
+            }
+            catch (Exception ex)
+            {
+                toolStripStatusLabel1.Text = $"An error occurred3: {ex.Message}";
+                if (port.IsOpen)
+                {
+                    port.Close();
+                }
+            }                
+            //await Task.Delay(500);            
         }
 
         private void test_button_Click(object sender, EventArgs e)
@@ -924,6 +933,6 @@ namespace WinFormsKlinkerCounter
             isWriting = true;
         }
 
-        
+       
     }
 }

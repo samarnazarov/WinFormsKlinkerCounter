@@ -124,6 +124,10 @@
             this.brutto_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.brutto_textBox.TextChanged += new System.EventHandler(this.brutto_textBox_TextChanged);
             // 
+            // writeDataTimer
+            // 
+            
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
