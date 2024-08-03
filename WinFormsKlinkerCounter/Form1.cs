@@ -119,7 +119,7 @@ namespace WinFormsKlinkerCounter
                     catch (Exception ex)
                     {
                         toolStripStatusLabel1.Text = $"An error occurred Com7: {ex.Message}";                         
-                        //if(port.IsOpen) { port.Close(); }                        
+                        if(port.IsOpen) { port.Close(); }                        
                     }
                    
                     if (port.IsOpen) 
