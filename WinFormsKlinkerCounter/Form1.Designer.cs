@@ -84,6 +84,7 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerPort = new System.Windows.Forms.Timer(this.components);
             this.qrCodeTextBoxDoNull_timer = new System.Windows.Forms.Timer(this.components);
+            this.serialPort_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.qrCode_pictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -123,10 +124,6 @@
             this.brutto_textBox.TabIndex = 7;
             this.brutto_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.brutto_textBox.TextChanged += new System.EventHandler(this.brutto_textBox_TextChanged);
-            // 
-            // writeDataTimer
-            // 
-            
             // 
             // menuStrip1
             // 
@@ -203,6 +200,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.groupBox1.Controls.Add(this.serialPort_label);
             this.groupBox1.Controls.Add(this.oldWeight_label);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.sensor_label);
@@ -315,7 +313,7 @@
             this.weightIndicator_label.Name = "weightIndicator_label";
             this.weightIndicator_label.Size = new System.Drawing.Size(316, 74);
             this.weightIndicator_label.TabIndex = 14;
-            this.weightIndicator_label.Text = "0.0";
+            this.weightIndicator_label.Text = "0/0";
             this.weightIndicator_label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
@@ -594,6 +592,15 @@
             // 
             this.qrCodeTextBoxDoNull_timer.Tick += new System.EventHandler(this.qrCodeTextBoxDoNull_timer_Tick);
             // 
+            // serialPort_label
+            // 
+            this.serialPort_label.AutoSize = true;
+            this.serialPort_label.Location = new System.Drawing.Point(93, 203);
+            this.serialPort_label.Name = "serialPort_label";
+            this.serialPort_label.Size = new System.Drawing.Size(50, 24);
+            this.serialPort_label.TabIndex = 24;
+            this.serialPort_label.Text = "0000";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -683,6 +690,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn destination;
         private System.Windows.Forms.Label oldWeight_label;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label serialPort_label;
     }
 }
 

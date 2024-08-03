@@ -64,21 +64,21 @@ namespace WinFormsKlinkerCounter
         public DateTime date;
 
         
-        /*int COUNT = 5000;  
+        int COUNT = 5000;  
         Double maxWeight = 4.0;
         string comPort = "COM11";
-        string modbusPort = "COM11";
+        string modbusPort = "COM10";
         string cameraUrl = "http://172.16.29.4/ISAPI/Streaming/channels/101/picture";
         //***********************ВКЛЮЧИТЬ OnCmd()
-        public string connectionString = "Server=Nazarov-S\\SQLEXPRESS;Database=klinkerDataBase;Integrated Security=SSPI;";*/
+        public string connectionString = "Server=Nazarov-S\\SQLEXPRESS;Database=klinkerDataBase;Integrated Security=SSPI;";
 
 
-        int COUNT = 70000;      
+        /*int COUNT = 70000;      
         Double maxWeight = 35.0;
         string comPort = "COM7";
         string modbusPort = "COM8";
         string cameraUrl = "http://172.16.29.5/ISAPI/Streaming/channels/101/picture";
-        public string connectionString = "Server=TAROZI-KLINKER;Database=klinkerDataBase;Integrated Security=SSPI;";
+        public string connectionString = "Server=TAROZI-KLINKER;Database=klinkerDataBase;Integrated Security=SSPI;";*/
 
         //Многопоточность
         Thread thread1;
@@ -92,6 +92,7 @@ namespace WinFormsKlinkerCounter
             //iniFileReading();
             InitializeComponent(); // Initialize the form components first
             //port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
+            //port.Open();
             //StartProcessing();
             //CreateTimersAndLaunch();
 
@@ -100,20 +101,40 @@ namespace WinFormsKlinkerCounter
             qrCodeTextBoxDoNull_timer.Tick += qrCodeTextBoxDoNull_timer_Tick;
             qrCodeTextBoxDoNull_timer.Interval = 100000;
 
-            thread1 = new Thread(async delegate () 
+            //thread1 = new Thread(async delegate ()
+            thread1 = new Thread(async delegate()
             {
+                port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
+                port.Open();                
                 while (true)
-                {
+                {                    
                     try
                     {
+                        if (!port.IsOpen)
+                        {
+                            port.Open();
+                        }
                         Reading();                       
                     }
                     catch (Exception ex)
                     {
                         toolStripStatusLabel1.Text = $"An error occurred Com7: {ex.Message}";                         
-                        if(port.IsOpen) { port.Close(); }                        
+                        //if(port.IsOpen) { port.Close(); }                        
                     }
-                    await Task.Delay(500);
+                   
+                    if (port.IsOpen) 
+                    {
+                        serialPort_label.Text = "порт открыт";
+                    }
+                    else if (!port.IsOpen)
+                    {
+                        serialPort_label.Text = "порт закрыт";
+                    }
+                    else
+                    {
+                        serialPort_label.Text = "что-то!";
+                    }
+                    await Task.Delay(100);
                 }               
             });
             /*thread2 = new Thread(async delegate ()
@@ -278,56 +299,31 @@ namespace WinFormsKlinkerCounter
             }            
         }
    
-        private async void Reading() 
-        {           
+        private async Task Reading() 
+        {
             try
             {
-                port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
-                start = true;
-            }
-            catch (Exception ex)
-            {
-                toolStripStatusLabel1.Text = $"An error occurred2: {ex.Message}";
-            }
-              
-            try
-            {
+                string ssuz = port.ReadLine();
+                if (isWriting)
                 {
-                    //labelTimerPort.Text = "timer uchdi!";
-                    if (!port.IsOpen)
-                    {
-                        port.Open();
-                    }
-
-                    string ssuz = port.ReadLine();
-                    if (isWriting)
-                    {
-                        port.WriteLine("B");
-                        isWriting = false;
-                    }
-
-                    if (ssuz != null && ssuz.Length == 14)
-                    {
-                        microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
-                        stabRegisters = ssuz.Substring(9, 1);
-                    }
-                    else
-                    {
-                        toolStripStatusLabel1.Text = "Invalid data length";
-                    }
-                    Double.TryParse(microsimData, out microsimDoubleData);
-                    Invoke((Action)(() =>
-                        {
-                            weightIndicatorTest = microsimData;
-                            bruttoTest = microsimData.Replace("-", "");
-                        }));
-                    /*
-                    if (port.IsOpen)
-                    {
-                        port.Close();
-                    }*/
-                        
+                    port.WriteLine("B");
+                    isWriting = false;
                 }
+                if (ssuz != null && ssuz.Length == 14)
+                {
+                    microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
+                    stabRegisters = ssuz.Substring(9, 1);
+                }
+                else
+                {
+                    toolStripStatusLabel1.Text = "Invalid data length";
+                }
+                Double.TryParse(microsimData, out microsimDoubleData);
+                Invoke((Action)(() =>
+                    {
+                        weightIndicatorTest = microsimData;
+                        bruttoTest = microsimData.Replace("-", "");
+                    }));               
             }
             catch (Exception ex)
             {
@@ -336,8 +332,7 @@ namespace WinFormsKlinkerCounter
                 {
                     port.Close();
                 }
-            }                
-            //await Task.Delay(500);            
+            }                       
         }
 
         private void test_button_Click(object sender, EventArgs e)
@@ -463,7 +458,7 @@ namespace WinFormsKlinkerCounter
             }
             catch (Exception ex) 
             {
-                toolStripStatusLabel1.Text = $"An error occurred Port7: {ex.Message}";
+                toolStripStatusLabel1.Text = $"ModbusPort OnCmd not worked!: {ex.Message}";
                 return;
             }
                                   
