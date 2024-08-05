@@ -42,6 +42,7 @@ namespace WinFormsKlinkerCounter
     
     public partial class Form1 : Form
     {
+        string ssuz;
         private bool isWriting = false;
         private decimal oldWeight;
         static public bool EN;
@@ -101,7 +102,7 @@ namespace WinFormsKlinkerCounter
             qrCodeTextBoxDoNull_timer.Tick += qrCodeTextBoxDoNull_timer_Tick;
             qrCodeTextBoxDoNull_timer.Interval = 100000;
 
-            //thread1 = new Thread(async delegate ()
+            //Task task1 = Task.Run(() =>
             thread1 = new Thread(async delegate()
             {
                 port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
@@ -114,14 +115,13 @@ namespace WinFormsKlinkerCounter
                         {
                             port.Open();
                         }
-                        Reading();                       
+                        Reading();                        
                     }
                     catch (Exception ex)
                     {
                         toolStripStatusLabel1.Text = $"An error occurred Com7: {ex.Message}";                         
                         if(port.IsOpen) { port.Close(); }                        
-                    }
-                   
+                    }                   
                     if (port.IsOpen) 
                     {
                         serialPort_label.Text = "порт открыт";
@@ -133,10 +133,11 @@ namespace WinFormsKlinkerCounter
                     else
                     {
                         serialPort_label.Text = "что-то!";
-                    }
-                    await Task.Delay(100);
+                    }                    
                 }               
             });
+
+            //Task.WhenAll(task1);
             /*thread2 = new Thread(async delegate ()
             {
                 while (true)
@@ -303,36 +304,44 @@ namespace WinFormsKlinkerCounter
         {
             try
             {
-                string ssuz = port.ReadLine();
+                ssuz = port.ReadLine();
+                
+                //if (string.IsNullOrEmpty(ssuz))
+                    //return;
                 if (isWriting)
                 {
                     port.WriteLine("B");
                     isWriting = false;
+                    toolStripStatusLabel1.Text = "Tara tarozi";
                 }
-                if (ssuz != null && ssuz.Length == 14)
+                if (!string.IsNullOrEmpty(ssuz) && ssuz.Length == 14)
                 {
                     microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
                     stabRegisters = ssuz.Substring(9, 1);
+                    toolStripStatusLabel1.Text = "OK";
                 }
                 else
                 {
                     toolStripStatusLabel1.Text = "Invalid data length";
+                    throw new Exception("Hech narsa o'qib bo'mayapti");                    
                 }
                 Double.TryParse(microsimData, out microsimDoubleData);
                 Invoke((Action)(() =>
                     {
                         weightIndicatorTest = microsimData;
                         bruttoTest = microsimData.Replace("-", "");
-                    }));               
+                    }));
+                port.DiscardInBuffer();
             }
             catch (Exception ex)
             {
                 toolStripStatusLabel1.Text = $"An error occurred3: {ex.Message}";
                 if (port.IsOpen)
                 {
+                    port.DiscardInBuffer();
                     port.Close();
-                }
-            }                       
+                }                
+            }
         }
 
         private void test_button_Click(object sender, EventArgs e)

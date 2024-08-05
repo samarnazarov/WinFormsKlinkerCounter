@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{1479DF5D-B257-4E92-A5CF-E1477DA234DC}|WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj|solutionrelative:winformsklinkercounter\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1479DF5D-B257-4E92-A5CF-E1477DA234DC}|WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj|D:\\My Projects\\C#\\WinFormsKlinkerCounter\\winformsklinkercounter\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1479DF5D-B257-4E92-A5CF-E1477DA234DC}|WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj|d:\\my projects\\c#\\winformsklinkercounter\\winformsklinkercounter\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1479DF5D-B257-4E92-A5CF-E1477DA234DC}|WinFormsKlinkerCounter\\WinFormsKlinkerCounter.csproj|solutionrelative:winformsklinkercounter\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -77,16 +77,20 @@
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormsKlinkerCounter\\Form1.cs",
-              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs",
-              "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs",
-              "ViewState": "AQIAAKsBAAAAAAAAAAAEwMoBAAAhAAAA",
+              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs*",
+              "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs*",
+              "ViewState": "AQIAADABAAAAAAAAAAArwDgBAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T12:46:38.624Z",
+              "WhenOpened": "2024-08-03T12:15:01.3Z",
               "EditorCaption": ""
             },
             {
@@ -95,10 +99,10 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormsKlinkerCounter\\Form1.cs",
-              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs [Design]",
-              "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs [Design]",
+              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs [Design]*",
+              "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T05:36:19.858Z",
+              "WhenOpened": "2024-08-03T12:14:58.544Z",
               "EditorCaption": " [Design]"
             }
           ]
