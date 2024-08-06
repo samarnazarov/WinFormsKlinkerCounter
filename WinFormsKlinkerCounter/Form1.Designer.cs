@@ -36,7 +36,6 @@
             this.qrCodeText_textBox = new System.Windows.Forms.TextBox();
             this.myTimer = new System.Windows.Forms.Timer(this.components);
             this.brutto_textBox = new System.Windows.Forms.TextBox();
-            this.writeDataTimer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.стартToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запуститьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +45,7 @@
             this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.serialPort_label = new System.Windows.Forms.Label();
             this.oldWeight_label = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.sensor_label = new System.Windows.Forms.Label();
@@ -82,9 +82,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timerPort = new System.Windows.Forms.Timer(this.components);
             this.qrCodeTextBoxDoNull_timer = new System.Windows.Forms.Timer(this.components);
-            this.serialPort_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.qrCode_pictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -219,6 +217,15 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Данные авто";
+            // 
+            // serialPort_label
+            // 
+            this.serialPort_label.AutoSize = true;
+            this.serialPort_label.Location = new System.Drawing.Point(93, 203);
+            this.serialPort_label.Name = "serialPort_label";
+            this.serialPort_label.Size = new System.Drawing.Size(50, 24);
+            this.serialPort_label.TabIndex = 24;
+            this.serialPort_label.Text = "0000";
             // 
             // oldWeight_label
             // 
@@ -584,22 +591,9 @@
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 17);
             // 
-            // timerPort
-            // 
-            this.timerPort.Interval = 5000;
-            // 
             // qrCodeTextBoxDoNull_timer
             // 
             this.qrCodeTextBoxDoNull_timer.Tick += new System.EventHandler(this.qrCodeTextBoxDoNull_timer_Tick);
-            // 
-            // serialPort_label
-            // 
-            this.serialPort_label.AutoSize = true;
-            this.serialPort_label.Location = new System.Drawing.Point(93, 203);
-            this.serialPort_label.Name = "serialPort_label";
-            this.serialPort_label.Size = new System.Drawing.Size(50, 24);
-            this.serialPort_label.TabIndex = 24;
-            this.serialPort_label.Text = "0000";
             // 
             // Form1
             // 
@@ -642,7 +636,6 @@
         private System.Windows.Forms.TextBox qrCodeText_textBox;
         private System.Windows.Forms.Timer myTimer;
         private System.Windows.Forms.TextBox brutto_textBox;
-        private System.Windows.Forms.Timer writeDataTimer;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem стартToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem запуститьToolStripMenuItem;
@@ -670,7 +663,6 @@
         private System.Windows.Forms.ToolStripMenuItem записьНастроекToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетToolStripMenuItem;
-        private System.Windows.Forms.Timer timerPort;
         private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.TextBox destination_textBox;
         private System.Windows.Forms.Label label9;

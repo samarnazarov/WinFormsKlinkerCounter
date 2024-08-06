@@ -138,23 +138,7 @@ namespace WinFormsKlinkerCounter
             });
 
             //Task.WhenAll(task1);
-            /*thread2 = new Thread(async delegate ()
-            {
-                while (true)
-                {
-                    try
-                    {
-                        await HttpClientUsing();
-                        await Task.Delay(1000);
-                    }
-                    catch (Exception ex)
-                    {
-                        toolStripStatusLabel1.Text = $"An error occurred Com******: {ex.Message}";
-                        await Task.Delay(100);
-                    }
-                }
-               
-            });*/
+ 
 
             //alwaysUpdate += new News(this.updateDataGridFromDataBase);
             //httpClientUpdate += new News(this.HttpClientUsing);
@@ -251,8 +235,8 @@ namespace WinFormsKlinkerCounter
                 {
                     NullIndicator_panel.BackColor = Color.Red;
                 }
+               
                 if (stabRegisters.Equals(" ") && microsimDoubleData >= maxWeight&& qrCodeText_textBox.Text!= "Не определен!")
-                //if (stabRegisters.Equals(" ") && microsimDoubleData >= maxWeight)
                 {
                     try
                     {
@@ -260,7 +244,7 @@ namespace WinFormsKlinkerCounter
                         {
                             date = DateTime.Now;
                             SaveImageToFile(date);
-                            Thread.Sleep(100);
+                            Thread.Sleep(100);                            
                             writeDataToDatabase(date);
                             try
                             {
@@ -268,14 +252,13 @@ namespace WinFormsKlinkerCounter
                             }
                             catch (Exception ex)
                             {
-                                toolStripStatusLabel1.Text = $"An error occurred0: {ex.Message}";
-                                return;
+                                toolStripStatusLabel1.Text = $"An error occurred0: {ex.Message}";  
                             }
-                            Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
+                           
                         }
                         else
                         {
-                            return;
+                            toolStripStatusLabel1.Text = $"Dont saved!";
                         }
                     }
                     catch (Exception ex){ MessageBox.Show($"{ex}"); }
@@ -284,13 +267,13 @@ namespace WinFormsKlinkerCounter
                     sensor_label.Text = microsimDoubleData.ToString();
                     oldWeight_label.Text = (0.2*(double)oldWeight).ToString();
                     }));
-                if (0.2 * (double)oldWeight >= microsimDoubleData)
+                if (0.2 * (double)oldWeight >= microsimDoubleData&&oldWeight!=0)
                 {
                     canWriteData = true;
                     oldWeight = 0;
+                    Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
                     //writeDataTimer.Stop();    
                 }
-
             }
             catch (Exception ex)
             {
@@ -305,9 +288,7 @@ namespace WinFormsKlinkerCounter
             try
             {
                 ssuz = port.ReadLine();
-                
-                //if (string.IsNullOrEmpty(ssuz))
-                    //return;
+              
                 if (isWriting)
                 {
                     port.WriteLine("B");
@@ -318,7 +299,7 @@ namespace WinFormsKlinkerCounter
                 {
                     microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
                     stabRegisters = ssuz.Substring(9, 1);
-                    toolStripStatusLabel1.Text = "OK";
+                    //toolStripStatusLabel1.Text = "OK";
                 }
                 else
                 {
@@ -935,8 +916,6 @@ namespace WinFormsKlinkerCounter
         private void NULL_button_Click(object sender, EventArgs e)
         {
             isWriting = true;
-        }
-
-       
+        }       
     }
 }

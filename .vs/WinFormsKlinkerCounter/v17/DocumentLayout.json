@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -81,16 +81,20 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormsKlinkerCounter\\Form1.cs",
-              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs*",
-              "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs*",
-              "ViewState": "AQIAADABAAAAAAAAAAArwDgBAAAoAAAA",
+              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs",
+              "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAEwPkAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T12:15:01.3Z",
+              "WhenOpened": "2024-08-06T06:19:03.539Z",
               "EditorCaption": ""
             },
             {
@@ -99,11 +103,15 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormsKlinkerCounter\\Form1.cs",
-              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs [Design]*",
-              "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs [Design]*",
+              "ToolTip": "D:\\My Projects\\C#\\WinFormsKlinkerCounter\\WinFormsKlinkerCounter\\Form1.cs [Design]",
+              "RelativeToolTip": "WinFormsKlinkerCounter\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T12:14:58.544Z",
+              "WhenOpened": "2024-08-06T06:18:59.881Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }
