@@ -65,25 +65,29 @@ namespace WinFormsKlinkerCounter
         public DateTime date;
 
         
-        int COUNT = 5000;  
+        /*int COUNT = 5000;  
         Double maxWeight = 4.0;
+        Double minWeight = 1.0;
         string comPort = "COM11";
         string modbusPort = "COM10";
         string cameraUrl = "http://172.16.29.4/ISAPI/Streaming/channels/101/picture";
         //***********************ВКЛЮЧИТЬ OnCmd()
-        public string connectionString = "Server=Nazarov-S\\SQLEXPRESS;Database=klinkerDataBase;Integrated Security=SSPI;";
+        public string connectionString = "Server=Nazarov-S\\SQLEXPRESS;Database=klinkerDataBase;Integrated Security=SSPI;";*/
 
 
-        /*int COUNT = 70000;      
+        int COUNT = 70000;      
         Double maxWeight = 35.0;
+        Double minWeight = 3.0;
         string comPort = "COM7";
         string modbusPort = "COM8";
         string cameraUrl = "http://172.16.29.5/ISAPI/Streaming/channels/101/picture";
-        public string connectionString = "Server=TAROZI-KLINKER;Database=klinkerDataBase;Integrated Security=SSPI;";*/
+        public string connectionString = "Server=TAROZI-KLINKER;Database=klinkerDataBase;Integrated Security=SSPI;";
 
         //Многопоточность
         Thread thread1;
-        Thread thread2;
+        //Thread thread2;
+        //Thread thread3;
+        //Thread thread4;
 
         string weightIndicatorTest;
         string bruttoTest;
@@ -100,29 +104,28 @@ namespace WinFormsKlinkerCounter
             myTimer.Tick += myTimer_Tick;
             myTimer.Interval = 50;
             qrCodeTextBoxDoNull_timer.Tick += qrCodeTextBoxDoNull_timer_Tick;
-            qrCodeTextBoxDoNull_timer.Interval = 100000;
+            qrCodeTextBoxDoNull_timer.Interval = 15000;
 
-            //Task task1 = Task.Run(() =>
-            thread1 = new Thread(async delegate()
+            thread1 = new Thread(async delegate() 
             {
                 port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
-                port.Open();                
+                port.Open();
                 while (true)
-                {                    
+                {
                     try
                     {
                         if (!port.IsOpen)
                         {
                             port.Open();
                         }
-                        Reading();                        
+                        Reading();
                     }
                     catch (Exception ex)
                     {
-                        toolStripStatusLabel1.Text = $"An error occurred Com7: {ex.Message}";                         
-                        if(port.IsOpen) { port.Close(); }                        
-                    }                   
-                    if (port.IsOpen) 
+                        toolStripStatusLabel1.Text = $"An error occurred Com7: {ex.Message}";
+                        if (port.IsOpen) { port.Close(); }
+                    }
+                    if (port.IsOpen)
                     {
                         serialPort_label.Text = "порт открыт";
                     }
@@ -133,13 +136,53 @@ namespace WinFormsKlinkerCounter
                     else
                     {
                         serialPort_label.Text = "что-то!";
-                    }                    
-                }               
+                    }
+                }
             });
 
-            //Task.WhenAll(task1);
- 
+            /*thread2 =new Thread(()=> {
+                while (true)
+                {                    
+                    Invoke((Action)(() => {
+                        conditionsChecking();
+                    }));                 
+                    //Thread.Sleep(100);
+                }
+            });
 
+            thread3 = new Thread(async () => {
+                while (true)
+                {                  
+                    Invoke((Action)(() =>
+                    {
+                        HttpClientUsing();
+                    }));                    
+                    Thread.Sleep(100);
+                }
+            });
+
+            thread4 = new Thread(() => {
+                while (true)
+                {                  
+                    Invoke((Action)(() =>
+                    {
+                        updateDataGridFromDataBase();
+                    }));                   
+                    Thread.Sleep(1000);
+                }
+            });*/
+
+            /*Task.Run(async () => {
+                while (true)
+                {
+                    Invoke((Action)(() => {
+                        HttpClientUsing();
+                    }));
+                    //
+                    await Task.Delay(200);
+                }
+            });*/
+         
             //alwaysUpdate += new News(this.updateDataGridFromDataBase);
             //httpClientUpdate += new News(this.HttpClientUsing);
             //weightIndicatorUpdate += new News(this.getDataFromWeightIndicator);
@@ -148,7 +191,11 @@ namespace WinFormsKlinkerCounter
 
         private void qrCodeTextBoxDoNull_timer_Tick(object sender, EventArgs e)
         {
-            Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
+            if (weightIndicator_label.Text=="0,0"|| weightIndicator_label.Text == "0,1")
+            {
+                Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
+            }
+            
         }
 
         private async void запуститьToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -161,7 +208,10 @@ namespace WinFormsKlinkerCounter
                 qrCodeTextBoxDoNull_timer.Start();
                 //thread2.Start();
                 //thread2.IsBackground = true;
-
+                //thread3.Start();
+                //thread3.IsBackground = true;
+                //thread4.Start();
+                //thread4.IsBackground = true;
             } 
             else
             { 
@@ -189,15 +239,14 @@ namespace WinFormsKlinkerCounter
             }
             try
             {
-                updateDataGridFromDataBase();
+               updateDataGridFromDataBase();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Проблема с базой данных");
             }
             try
-            {
-               
+            {               
                 conditionsChecking();
             }
             catch (Exception ex)
@@ -236,15 +285,21 @@ namespace WinFormsKlinkerCounter
                     NullIndicator_panel.BackColor = Color.Red;
                 }
                
-                if (stabRegisters.Equals(" ") && microsimDoubleData >= maxWeight&& qrCodeText_textBox.Text!= "Не определен!")
-                {
-                    try
+                //if (stabRegisters.Equals(" ") && microsimDoubleData >= maxWeight&& qrCodeText_textBox.Text!= "Не определен!")
+                if (stabRegisters.Equals(" ") && microsimDoubleData >= maxWeight)
                     {
+                    try
+                    {                        
                         if (canWriteData)
                         {
+                           /* if (qrCodeText_textBox.Text == "Не определен!")
+                            {
+                                Thread.Sleep(5000);
+                                MessageBox.Show("hhhhhhhhhhhhhh");
+                            }*/
                             date = DateTime.Now;
                             SaveImageToFile(date);
-                            Thread.Sleep(100);                            
+                            Thread.Sleep(100);
                             writeDataToDatabase(date);
                             try
                             {
@@ -252,9 +307,8 @@ namespace WinFormsKlinkerCounter
                             }
                             catch (Exception ex)
                             {
-                                toolStripStatusLabel1.Text = $"An error occurred0: {ex.Message}";  
+                                toolStripStatusLabel1.Text = $"An error occurred0: {ex.Message}";
                             }
-                           
                         }
                         else
                         {
@@ -280,7 +334,8 @@ namespace WinFormsKlinkerCounter
                 modbusClient.Disconnect();
                 toolStripStatusLabel1.Text = $"An error occurred1: {ex.Message}";
                 return;
-            }            
+            }
+            //Thread.Sleep(100);
         }
    
         private async Task Reading() 
@@ -368,7 +423,10 @@ namespace WinFormsKlinkerCounter
                                 if (result != null && lastChar == "A" || lastChar == "B")//**********
                                 //if (result != null)
                                 {
-                                    Invoke((Action)(() => qrCodeText_textBox.Text = result.Text));
+                                    Invoke((Action)(() => 
+                                    {                                        
+                                        qrCodeText_textBox.Text = result.Text; 
+                                    }));
                                 }
                                 await Task.Delay(200);
                             }
@@ -496,7 +554,7 @@ namespace WinFormsKlinkerCounter
 
         }
 
-        private async void updateDataGridFromDataBase()
+        private async Task updateDataGridFromDataBase()
         {
             try
             {
