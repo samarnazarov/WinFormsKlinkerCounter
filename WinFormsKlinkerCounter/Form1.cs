@@ -106,7 +106,7 @@ namespace WinFormsKlinkerCounter
             qrCodeTextBoxDoNull_timer.Tick += qrCodeTextBoxDoNull_timer_Tick;
             qrCodeTextBoxDoNull_timer.Interval = 15000;
 
-            thread1 = new Thread(async delegate() 
+            thread1 = new Thread(()=> 
             {
                 port = new SerialPort(comPort, 9600, Parity.None, 8, StopBits.One);
                 port.Open();
@@ -137,6 +137,7 @@ namespace WinFormsKlinkerCounter
                     {
                         serialPort_label.Text = "что-то!";
                     }
+                    Thread.Sleep(1000);
                 }
             });
 
@@ -191,7 +192,7 @@ namespace WinFormsKlinkerCounter
 
         private void qrCodeTextBoxDoNull_timer_Tick(object sender, EventArgs e)
         {
-            if (weightIndicator_label.Text=="0,0"|| weightIndicator_label.Text == "0,1")
+            if (weightIndicator_label.Text=="0,00"|| weightIndicator_label.Text == "0,05")
             {
                 Invoke((Action)(() => qrCodeText_textBox.Text = "Не определен!"));
             }
@@ -338,7 +339,7 @@ namespace WinFormsKlinkerCounter
             //Thread.Sleep(100);
         }
    
-        private async Task Reading() 
+        private void Reading() 
         {
             try
             {
