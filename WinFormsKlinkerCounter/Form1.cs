@@ -127,15 +127,25 @@ namespace WinFormsKlinkerCounter
                     }
                     if (port.IsOpen)
                     {
-                        serialPort_label.Text = "порт открыт";
+                        Invoke((Action)(()=>
+                        {
+                            serialPort_label.Text = "порт открыт";
+                        }));
+                        
                     }
                     else if (!port.IsOpen)
                     {
-                        serialPort_label.Text = "порт закрыт";
+                        Invoke((Action)(() =>
+                        {
+                            serialPort_label.Text = "порт закрыт";
+                        }));                        
                     }
                     else
                     {
-                        serialPort_label.Text = "что-то!";
+                        Invoke((Action)(() =>
+                        {
+                            serialPort_label.Text = "что-то!";
+                        }));
                     }
                     Thread.Sleep(1000);
                 }
@@ -260,14 +270,13 @@ namespace WinFormsKlinkerCounter
         private void conditionsChecking()
         {
             try
-            {
+            {                
                 brutto_textBox.Text = weightIndicatorTest;
                 weightIndicator_label.Text = bruttoTest;
-              
-                if (microsimData.Equals("0"))
+                if (string.IsNullOrEmpty(weightIndicatorTest))
                 {
-                    brutto_textBox.Text = "0,00";
-                    weightIndicator_label.Text = "0,00";
+                    brutto_textBox.Text = " ";
+                    weightIndicator_label.Text = " ";
                 }
                 if (stabRegisters==" ")
                 {
@@ -343,8 +352,7 @@ namespace WinFormsKlinkerCounter
         {
             try
             {
-                ssuz = port.ReadLine();
-              
+                ssuz = port.ReadLine();              
                 if (isWriting)
                 {
                     port.WriteLine("B");
@@ -354,17 +362,11 @@ namespace WinFormsKlinkerCounter
                 if (!string.IsNullOrEmpty(ssuz) && ssuz.Length == 14)
                 {
                     microsimData = ssuz.Substring(2, 7).Trim().Replace(".", ",");
-                    stabRegisters = ssuz.Substring(9, 1);
-                    //toolStripStatusLabel1.Text = "OK";
-                }
-                else
-                {
-                    toolStripStatusLabel1.Text = "Invalid data length";
-                    throw new Exception("Hech narsa o'qib bo'mayapti");                    
+                    stabRegisters = ssuz.Substring(9, 1);                    
                 }
                 Double.TryParse(microsimData, out microsimDoubleData);
                 Invoke((Action)(() =>
-                    {
+                    {                        
                         weightIndicatorTest = microsimData;
                         bruttoTest = microsimData.Replace("-", "");
                     }));
